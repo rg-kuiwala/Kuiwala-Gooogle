@@ -1,52 +1,277 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta name="description" content="Kuiwala Gooogle - Your source for the latest news on coding, AI, and blogging.">
-       <title>Kuiwala Gooogle</title>
-       <link rel="stylesheet" href="css/styles.css">
-   </head>
-   <body>
-       <header>
-       <div class="scrolling-text">Kuiwala Gooogle</div>
-       <nav>
-           <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="#">Contact</a></li>
-           </ul>
-       </nav>
-   </header>
-       <main>
-       <div class="column">
-           <!-- Blog Post 1 -->
-           <div class="blog-post">
-               <h2>Blog Post Title 1</h2>
-               <p>Snippet of the blog post... <a href="#">Read more...</a></p>
-           </div>
-           <!-- Blog Post 2 -->
-           <div class="blog-post">
-               <h2>Blog Post Title 2</h2>
-               <p>Snippet of the blog post... <a href="#">Read more...</a></p>
-           </div>
-       </div>
-       <div class="column">
-           <!-- Additional columns or content here -->
-       </div>
-       <div class="column">
-           <!-- Additional columns or content here -->
-       </div>
-       <footer>
-       <nav>
-           <ul>
-               <li><a href="#">Privacy Policy</a></li>
-               <li><a href="#">Terms of Service</a></li>
-               <li><a href="#">Contact</a></li>
-           </ul>
-       </nav>
-   </footer>
-       <script src="js/scripts.js"></script>
-   </body>
-   </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kuiwala Gooogle - Your trusted source for latest news, updates, and breaking stories worldwide">
+    <meta name="keywords" content="news, breaking news, latest updates, world news, technology, sports, entertainment">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kuiwala Gooogle - Trusted News Source">
+    <meta property="og:description" content="Your daily dose of news from around the world">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Kuiwala Gooogle">
+    <meta property="twitter:description" content="Stay informed with real-time news updates">
+    
+    <title>Kuiwala Gooogle - Latest News</title>
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e91e63;
+            --text-color: #202124;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--primary-color);
+            padding: 1rem;
+            color: white;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--secondary-color);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Featured Article */
+        .featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .newsletter input {
+            padding: 0.5rem;
+            width: 70%;
+            margin-right: 1rem;
+        }
+
+        .newsletter button {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Kuiwala Gooogle</div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#world">World</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#entertainment">Entertainment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="grid">
+            <article class="card featured">
+                <img src="featured-news.jpg" alt="Featured News Story" loading="lazy">
+                <div class="card-content">
+                    <h2>Breaking: Major Technology Breakthrough</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="news1.jpg" alt="World News Update" loading="lazy">
+                <div class="card-content">
+                    <h3>Global Summit Concludes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <!-- Add more news cards -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid container">
+            <div class="about">
+                <h4>About Us</h4>
+                <p>Your trusted source for reliable and up-to-date news coverage.</p>
+            </div>
+            <div class="links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Subscribe</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright" style="text-align: center; margin-top: 2rem;">
+            © <span id="year"></span> Kuiwala Gooogle. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic Year Update
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Lazy Loading Images
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => {
+            observer.observe(img);
+        });
+    </script>
+</body>
+</html>
