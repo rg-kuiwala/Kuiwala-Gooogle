@@ -3,358 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kuiwala Gooogle - Latest Breaking News, Trends, and Updates">
-    <title>Kuiwala Gooogle - Trending News Portal</title>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Happy Holi Wishes 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
-            --primary-color: #6c5ce7;
-            --secondary-color: #fff;
-            --accent-color: #ff7675;
-            --dark-bg: #2d3436;
-            --text-color: #2d3436;
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff99cc, #99ffcc);
+            min-height: 100vh;
         }
 
-        /* Header Styles */
-        .top-header {
-            background: var(--dark-bg);
-            padding: 1rem 0;
-            color: white;
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .header-content {
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        /* Main Navigation */
-        .main-nav {
-            background: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Main Content Layout */
-        .main-grid {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 20px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
         }
 
-        .featured-post {
-            grid-column: span 2;
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
+        .article-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .featured-post img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .post-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-        }
-
-        .post-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .post-card:hover {
+        .article-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .post-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .category-tag {
-            background: var(--accent-color);
+        .share-btn {
+            background: var(--secondary-color);
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            grid-column: span 1;
-        }
-
-        /* Footer */
-        .main-footer {
-            background: var(--dark-bg);
-            color: white;
-            padding: 3rem 0;
-            margin-top: 3rem;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 0 1rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #dfe6e9;
-            text-decoration: none;
-        }
-
-        .newsletter-input {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
             border: none;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
-        /* Responsive Design */
+        .share-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .animated {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ad-banner {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .featured-post {
-                grid-column: span 1;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                display: none;
-            }
-
-            .menu-toggle {
-                display: block;
-                color: white;
-                font-size: 1.5rem;
-            }
-
-            .footer-grid {
+            .container {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="header-content">
-            <div class="logo">Kuiwala Gooogle</div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+    <!-- Google Ads Header Placement -->
+    <div class="ad-banner">
+        <!-- Paste Google Ads Code Here -->
+    </div>
+
+    <header class="header">
+        <h1>Happy Holi 2024</h1>
+        <p>Spread Colorful Wishes with Your Loved Ones</p>
     </header>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Entertainment</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <main>
+            <article class="article-card animated">
+                <h2>Colorful Holi Wishes</h2>
+                <p>May your life be filled with vibrant colors this Holi! 🌈</p>
+                <button class="share-btn" onclick="openShareModal()">Share This Wish</button>
+            </article>
 
-    <!-- Main Content -->
-    <main class="main-grid">
-        <!-- Featured Post -->
-        <article class="featured-post">
-            <img src="featured-news.jpg" alt="Featured News" loading="lazy">
-            <div class="post-content">
-                <span class="category-tag">Breaking News</span>
-                <h2>Okay, the user wants to know how to make a Telegram bot and games. Let me start by breaking this down. First, they need to create a Telegram bot, which is done through BotFather. I should explain the steps of talking to BotFather, getting the API token, and setting up the basic bot. Then, integrating games into the bot.
+            <article class="article-card animated">
+                <h2>Sweet Holi Greetings</h2>
+                <p>Wishing you a Holi filled with sweets and laughter! 🍬</p>
+                <button class="share-btn" onclick="openShareModal()">Share This Wish</button>
+            </article>
+        </main>
 
-Wait, but how do games work on Telegram? I remember that games are a specific type of bot feature where you can send a game as a message. The user would need to create a game using the BotFather as well, by creating a new game, setting up the name, description, and uploading the game via a URL. The game itself has to be built with HTML5/JavaScript, right? So the actual game development is separate from the bot code.</h2>
-                <p>Latest updates on the groundbreaking political changes</p>
-            </div>
-        </article>
-
-        <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="post-card">
-                <img src="news1.jpg" alt="News 1" loading="lazy">
-                <div class="card-body">
-                    <span class="category-tag">Technology</span>
-                    <h3>New Innovation in AI Technology</h3>
-                </div>
+            <!-- Google Ads Sidebar Placement -->
+            <div class="ad-banner">
+                <!-- Paste Google Ads Code Here -->
             </div>
-            
-            <!-- Add more sidebar posts -->
         </aside>
+    </div>
 
-        <!-- Additional Posts Grid -->
-        <!-- Repeat post-card elements for more content -->
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Your trusted source for reliable and up-to-date news coverage across all categories.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Newsletter</h4>
-                <input type="email" class="newsletter-input" placeholder="Enter your email">
-                <button class="btn">Subscribe</button>
-            </div>
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <h3>Personalize Your Wish</h3>
+            <input type="text" id="senderName" placeholder="Your Name">
+            <button onclick="generateShareLink()">Generate Link</button>
+            <div id="shareLinkContainer"></div>
         </div>
-    </footer>
+    </div>
 
     <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.createElement('div');
-        menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        document.querySelector('.nav-container').prepend(menuToggle);
-
-        menuToggle.addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Lazy Load Images
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
+        // Add animation on scroll
+        window.addEventListener('scroll', () => {
+            const articles = document.querySelectorAll('.animated');
+            articles.forEach(article => {
+                const articleTop = article.getBoundingClientRect().top;
+                if (articleTop < window.innerHeight - 100) {
+                    article.style.opacity = '1';
+                    article.style.transform = 'translateY(0)';
                 }
             });
         });
 
-        lazyImages.forEach(img => {
-            imageObserver.observe(img);
-        });
+        function openShareModal() {
+            document.getElementById('shareModal').style.display = 'flex';
+        }
+
+        function generateShareLink() {
+            const name = document.getElementById('senderName').value || 'Friend';
+            const encodedName = encodeURIComponent(name);
+            const shareLink = `${window.location.href}?from=${encodedName}`;
+            
+            const shareContainer = document.getElementById('shareLinkContainer');
+            shareContainer.innerHTML = `
+                <p>Share this link:</p>
+                <input type="text" value="${shareLink}" readonly>
+                <button onclick="navigator.clipboard.writeText('${shareLink}')">Copy Link</button>
+            `;
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
     </script>
 </body>
 </html>
